@@ -1,7 +1,5 @@
 // Config de la API
-var API_BASE = window.location.hostname === 'localhost' 
-    ? 'http://localhost:5000' 
-    : 'https://TU_API_AZURE.azurewebsites.net';
+var API_BASE = 'https://perfeck-rankings-api.azurewebsites.net';
 
 // Al cargar la pagina
 document.addEventListener('DOMContentLoaded', function() {

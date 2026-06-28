@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./src/Api
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=
+    restart: unless-stopped
+
+  frontend:
+    build: ./src/Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfeckRankings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="header-bg">
+        <h1 class="titulo-pagina">PerfeckRankings</h1>
+    </div>
+
+    <nav class="nav-bar">
+        <button class="activo" onclick="mostrarTab('rankings')">Rankings</button>
+        <button onclick="mostrarTab('torneos')">Torneos</button>
+        <button onclick="mostrarTab('jugadores')">Jugadores</button>
+        <button onclick="mostrarTab('stats')">Estadisticas</button>
+    </nav>
+
+    <div class="contenedor">
+
+        <!-- Rankings -->
+        <section id="tab-rankings" class="seccion" style="display:block;">
+            <h2>Tabla de Clasificacion</h2>
+            <div id="rankings-content"></div>
+        </section>
+
+        <!-- Torneos -->
+        <section id="tab-torneos" class="seccion" style="display:none;">
+            <h2>Torneos</h2>
+            <div id="torneos-content"></div>
+            <div id="torneo-detalle" style="display:none;"></div>
+        </section>
+
+        <!-- Jugadores -->
+        <section id="tab-jugadores" class="seccion" style="display:none;">
+            <h2>Jugadores</h2>
+            <div id="jugadores-content"></div>
+            <button class="btn" onclick="mostrarFormJugador()">+ Nuevo Jugador</button>
+            <div id="jugador-form" style="display:none;"></div>
+        </section>
+
+        <!-- Estadisticas -->
+        <section id="tab-stats" class="seccion" style="display:none;">
+            <h2>Estadisticas Globales</h2>
+            <div id="stats-content"></div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>PerfeckRankings - Plataforma de Rankings y Torneos | <span id="api-status">Conectando...</span></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

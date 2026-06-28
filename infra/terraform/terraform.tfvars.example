@@ -1,0 +1,6 @@
+# Remplaza estos valores antes de ejecutar terraform apply
+sql_admin_login    = "perfeckadmin"
+sql_admin_password = "CambiaEstePassword123!"
+
+# Region de Azure (eastus2 tiene 3 AZs para HA)
+location           = "eastus2"

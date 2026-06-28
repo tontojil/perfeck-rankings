@@ -7,7 +7,7 @@ variable "resource_group_name" {
 variable "location" {
   description = "Region de Azure"
   type        = string
-  default     = "eastus2"
+  default     = "eastus"
 }
 
 variable "sql_admin_login" {
